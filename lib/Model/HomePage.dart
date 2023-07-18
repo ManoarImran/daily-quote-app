@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'BookMarkPage.dart';
+import 'FavoritePage.dart';
+import 'ProfilePage.dart';
+import 'SearchPage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,9 +18,9 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = [
     const HomePageBody(),
     const BookMarkPAge(),
-    const Placeholder(),
-    const Placeholder(),
-    const Placeholder(),
+    const SearchPage(),
+    const FavoritePage(),
+    const ProfilePage(),
   ];
 
   @override
