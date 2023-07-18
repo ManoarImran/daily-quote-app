@@ -25,12 +25,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF001C30),
-        title:  const Text(
-          'Daily Quote',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.normal,
-            color: Colors.white,
+        title:  Center(
+          child: const Text(
+            'Daily Quote',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.normal,
+              color: Colors.white,
+            ),
           ),
         ),
       ),

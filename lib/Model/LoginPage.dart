@@ -49,7 +49,7 @@ class _LoginPageBodyState extends State<LoginPageBody> {
             height: 70,
             width: 70,
             child: Image.asset(
-              'assets/quote.png',
+              'assets/book.png',
               // color: Colors.orange,
             ),
           ),
