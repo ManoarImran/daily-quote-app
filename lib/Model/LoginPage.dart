@@ -167,7 +167,7 @@ class _LoginPageBodyState extends State<LoginPageBody> {
                           child: const Text('Login'),
                           onPressed: () {
                             {
-                              Navigator.push(
+                              Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => HomePage()),

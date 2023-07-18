@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'BookMarkPage.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -8,13 +10,23 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _currentIndex = 0;
+
+  final List<Widget> _pages = [
+    const HomePageBody(),
+    const BookMarkPAge(),
+    const Placeholder(),
+    const Placeholder(),
+    const Placeholder(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF001C30),
-        title: const Text(
-          'Check List',
+        title:  const Text(
+          'Daily Quote',
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.normal,
@@ -22,7 +34,43 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: HomePageBody(),
+      body: _pages[_currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: (int index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        backgroundColor: const Color(0xFF001C30),
+        // Set the new navigation bar color here
+        selectedItemColor: const Color(0xFF176B87),
+        // Set the color of the selected item
+        unselectedItemColor: const Color(0xFF001C30),
+        // Set the color of unselected items
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.bookmark),
+            label: 'Bookmarks',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: 'Favorites',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+        ],
+      ),
     );
   }
 }
@@ -39,7 +87,7 @@ class HomePageBody extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'Quote of the Day',
                 style: TextStyle(
                   fontSize: 24,
@@ -47,262 +95,24 @@ class HomePageBody extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 16),
-              Text(
+              const SizedBox(height: 16),
+              const Text(
                 'Here goes the daily quote...',
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 8),
-              Text(
+              const SizedBox(height: 8),
+              const Text(
                 '- Author Name',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 16),
-              // Image.asset(
-              //   'assets/images/quote_image.jpg',
-              //   width: 200,
-              //   height: 200,
-              //   fit: BoxFit.cover,
-              // ),
-              Image.network(
-                'https://www.britadventures.com/wp-content/uploads/2022/01/travel-quotes-1.jpg',
-                width: 200,
-                height: 200,
-                fit: BoxFit.cover,
-              ),
-              Text(
-                'Quote of the Day',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              Text(
-                'Here goes the daily quote...',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '- Author Name',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              // Image.asset(
-              //   'assets/images/quote_image.jpg',
-              //   width: 200,
-              //   height: 200,
-              //   fit: BoxFit.cover,
-              // ),
-              Image.network(
-                'https://www.britadventures.com/wp-content/uploads/2022/01/travel-quotes-4.jpg',
-                width: 200,
-                height: 200,
-                fit: BoxFit.cover,
-              ),
-
-              Text(
-                'Quote of the Day',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              Text(
-                'Here goes the daily quote...',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '- Author Name',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              // Image.asset(
-              //   'assets/images/quote_image.jpg',
-              //   width: 200,
-              //   height: 200,
-              //   fit: BoxFit.cover,
-              // ),
-              Image.network(
-                'https://www.britadventures.com/wp-content/uploads/2022/01/travel-quotes-3.jpg',
-                width: 200,
-                height: 200,
-                fit: BoxFit.cover,
-              ),
-
-              Text(
-                'Quote of the Day',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              Text(
-                'Here goes the daily quote...',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '- Author Name',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              // Image.asset(
-              //   'assets/images/quote_image.jpg',
-              //   width: 200,
-              //   height: 200,
-              //   fit: BoxFit.cover,
-              // ),
-              Image.network(
-                'https://www.britadventures.com/wp-content/uploads/2022/02/road-trip-quote-1.jpg',
-                width: 200,
-                height: 200,
-                fit: BoxFit.cover,
-              ),
-
-              Text(
-                'Quote of the Day',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              Text(
-                'Here goes the daily quote...',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '- Author Name',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              // Image.asset(
-              //   'assets/images/quote_image.jpg',
-              //   width: 200,
-              //   height: 200,
-              //   fit: BoxFit.cover,
-              // ),
-              Image.network(
-                'https://www.britadventures.com/wp-content/uploads/2022/02/road-trip-quote-2.jpg',
-                width: 200,
-                height: 200,
-                fit: BoxFit.cover,
-              ),
-
-              Text(
-                'Quote of the Day',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              Text(
-                'Here goes the daily quote...',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '- Author Name',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              // Image.asset(
-              //   'assets/images/quote_image.jpg',
-              //   width: 200,
-              //   height: 200,
-              //   fit: BoxFit.cover,
-              // ),
-              Image.network(
-                'https://www.britadventures.com/wp-content/uploads/2022/02/road-trip-quote-3.jpg',
-                width: 200,
-                height: 200,
-                fit: BoxFit.cover,
-              ),
-
-              Text(
-                'Quote of the Day',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              Text(
-                'Here goes the daily quote...',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '- Author Name',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 16),
-              // Image.asset(
-              //   'assets/images/quote_image.jpg',
-              //   width: 200,
-              //   height: 200,
-              //   fit: BoxFit.cover,
-              // ),
-              Image.network(
-                'https://www.britadventures.com/wp-content/uploads/2022/02/road-trip-quote-4.jpg',
-                width: 200,
-                height: 200,
-                fit: BoxFit.cover,
-              ),
+              const SizedBox(height: 16),
+              // Rest of the code
             ],
           ),
         ),
@@ -310,3 +120,20 @@ class HomePageBody extends StatelessWidget {
     );
   }
 }
+
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//       ),
+//       home: HomePage(),
+//     );
+//   }
+// }
