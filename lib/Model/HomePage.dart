@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = [
     const HomePageBody(),
     const BookMarkPAge(),
-    const SearchPage(),
+     SearchPage(),
     const FavoritePage(),
     const ProfilePage(),
   ];
@@ -91,8 +91,8 @@ class HomePageBody extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
+            children: const [
+              Text(
                 'Quote of the Day',
                 style: TextStyle(
                   fontSize: 24,
@@ -100,24 +100,230 @@ class HomePageBody extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 16),
-              const Text(
+              SizedBox(height: 16),
+              Text(
                 'Here goes the daily quote...',
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 8),
-              const Text(
+              SizedBox(height: 8),
+              Text(
                 '- Author Name',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 16),
-              // Rest of the code
+              SizedBox(height: 16),
+
+              Text(
+                'Quote of the Day',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Here goes the daily quote...',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                '- Author Name',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+
+              Text(
+                'Quote of the Day',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Here goes the daily quote...',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                '- Author Name',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+
+              Text(
+                'Quote of the Day',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Here goes the daily quote...',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                '- Author Name',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+
+              Text(
+                'Quote of the Day',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Here goes the daily quote...',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                '- Author Name',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+
+              Text(
+                'Quote of the Day',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Here goes the daily quote...',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                '- Author Name',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Quote of the Day',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Here goes the daily quote...',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                '- Author Name',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+
+              Text(
+                'Quote of the Day',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Here goes the daily quote...',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                '- Author Name',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+
+              Text(
+                'Quote of the Day',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Here goes the daily quote...',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                '- Author Name',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
             ],
           ),
         ),
